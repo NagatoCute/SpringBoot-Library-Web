@@ -1,5 +1,7 @@
+// BookCRUD.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import '../styles.css'; // 导入 CSS 文件
 
 const BookCRUD = () => {
     const [books, setBooks] = useState([]);
@@ -43,28 +45,30 @@ const BookCRUD = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h1>Books CRUD</h1>
-            <input
-                type="text"
-                name="title"
-                value={newBook.title}
-                onChange={handleInputChange}
-                placeholder="Title"
-            />
-            <input
-                type="text"
-                name="author"
-                value={newBook.author}
-                onChange={handleInputChange}
-                placeholder="Author"
-            />
-            <button onClick={handleAddBook}>Add Book</button>
+            <div>
+                <input
+                    type="text"
+                    name="title"
+                    value={newBook.title}
+                    onChange={handleInputChange}
+                    placeholder="Title"
+                />
+                <input
+                    type="text"
+                    name="author"
+                    value={newBook.author}
+                    onChange={handleInputChange}
+                    placeholder="Author"
+                />
+                <button onClick={handleAddBook}>Add Book</button>
+            </div>
             <ul>
                 {books.map(book => (
                     <li key={book.id}>
                         {book.title} by {book.author}
-                        <button onClick={() => handleDeleteBook(book.id)}>Delete</button>
+                        <button className="delete" onClick={() => handleDeleteBook(book.id)}>Delete</button>
                     </li>
                 ))}
             </ul>

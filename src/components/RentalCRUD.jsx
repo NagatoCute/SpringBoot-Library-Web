@@ -1,5 +1,7 @@
+// RentalCRUD.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import '../styles.css'; // 导入 CSS 文件
 
 const RentalCRUD = () => {
     const [books, setBooks] = useState([]);
@@ -53,7 +55,7 @@ const RentalCRUD = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <h2>Rentals</h2>
             <div>
                 <select
@@ -79,12 +81,11 @@ const RentalCRUD = () => {
                 />
                 <button onClick={handleAddRental}>Add Rental</button>
             </div>
-            <h3>Existing Rentals</h3>
             <ul>
-                {rentals.map((rental) => (
+                {rentals.map(rental => (
                     <li key={rental.id}>
-                        Book: {books.find((book) => book.id === rental.book.id)?.title || 'Unknown'} | Start Date: {rental.startDate} | End Date: {rental.endDate}
-                        <button onClick={() => handleDeleteRental(rental.id)}>Delete</button>
+                        Book ID: {rental.book.id}, Start Date: {rental.startDate}, End Date: {rental.endDate}
+                        <button className="delete" onClick={() => handleDeleteRental(rental.id)}>Delete</button>
                     </li>
                 ))}
             </ul>
