@@ -1,0 +1,151 @@
+/* styles.css */
+
+/* 全局样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* 容器样式 */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航栏样式 */
+nav {
+    /*background-color: #ffffff;*/
+    padding: 15px 20px;
+    color: #ffffff;
+    border-radius: 1px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+    color: #e0f0ff;
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* 表单和按钮样式 */
+input, select, button {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    padding: 0;
+}
+
+/* 添加按钮样式 */
+button {
+    background-color: #28a745;
+    /*color: #ffffff;*/
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #c6c6c6;
+    cursor: not-allowed;
+}
+
+/* 删除按钮样式 */
+button.delete {
+    background-color: #dc3545;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    /* 固定大小 */
+    width: auto;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+/* 列表项样式 */
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+li:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.02);
+}
+
+li button.delete {
+    background-color: #dc3545;
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+/* 选择框样式 */
+select {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 12px;
+}
